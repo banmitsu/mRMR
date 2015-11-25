@@ -43,7 +43,7 @@ for i in range(len(X[0])):
 # Self-information = entropy
 #info = moduleinfo.mutualInformation(X_n[0], X_n[0]) #=5.9032
 #info = moduleinfo.mutualInformation(X_n[0], Y) #=0.2023
-
+I_i = []
 for i in range(len(X_n)):
 	f.write(str(i)+':')
 	# mutual information of Xi, Y
