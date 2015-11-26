@@ -33,26 +33,28 @@ for index in range(len(I)):
 	Matrix[index].append( dict(zip(keys, [index, I[index]])) )
 	FSets.append( set([index]) )
 
-NUM_F = 50#len(I)
+NUM_F = len(I)
 for m in range(1, NUM_F):
-	for i in range(len(I)):
-		inx = i
+	print 'feature count:', m
+	for x_i in range(len(I)):
 		max = sys.float_info.min
 
 		for j in range(len(I)):
-			if j not in FSets[i]:
+			if j not in FSets[x_i]:
 				redundancy = 0
-				for s in FSets[i]:
+				for s in FSets[x_i]:
 					redundancy += Iij[s][j]
-				mrmr = I[j]-(redundancy/len(FSets[i]))
-				if max < (Matrix[i][m-1]['value']+mrmr):
-					max = Matrix[i][m-1]['value']+mrmr
+				#mrmr = I[j]-(redundancy/(len(FSets[x_i])**2))
+				mrmr = I[j]
+				if max < (Matrix[x_i][m-1]['value']+mrmr):
+					max = Matrix[x_i][m-1]['value']+mrmr
 					inx = j
-					#print inx, ':'
-					#print Matrix[i][m-1]['value'], mrmr, max
+					#print x_i, ':', inx
+					#print Matrix[x_i][m-1]['value'], mrmr, max
 
-		FSets[i].add(inx)
-		Matrix[i].append( dict(zip(keys, [inx, max])))
+		FSets[x_i].add(inx)
+		Matrix[x_i].append( dict(zip(keys, [inx, max])))
+
 
 Phi_Matrix = zip(*Matrix)
 for m in range(NUM_F):
