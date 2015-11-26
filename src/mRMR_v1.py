@@ -44,8 +44,8 @@ for m in range(1, NUM_F):
 				redundancy = 0
 				for s in FSets[x_i]:
 					redundancy += Iij[s][j]
-				#mrmr = I[j]-(redundancy/(len(FSets[x_i])**2))
-				mrmr = I[j]
+				mrmr = I[j]-(redundancy/(len(FSets[x_i])**2))
+				#mrmr = I[j]
 				if max < (Matrix[x_i][m-1]['value']+mrmr):
 					max = Matrix[x_i][m-1]['value']+mrmr
 					inx = j
