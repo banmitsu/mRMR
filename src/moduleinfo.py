@@ -14,7 +14,7 @@ def mutualInformation(X, Y):
 				info += Pxy * math.log( Pxy/ (Px*Py) )
 			#print 'C1: ', c1, '+C2:', c2
 			#print Px, Py, Pxy
-	return info/math.log(2) # according to mRMR(?)
+	return info/math.log(2) # change of base 2 (bit count)
 	#d_x = density(X)
 	#d_y = density(Y)
 	#print d_y, len(d_y)
@@ -55,7 +55,7 @@ class Pair:
 					Pxy= np.mean( np.logical_and( x_eq_c1, y_eq_c2 ) )
 					if Pxy != 0 and Px!=0 and Py!=0:
 						info += Pxy * math.log( Pxy/(Px*Py) )
-			self.crossInfo.append(info/math.log(2))
+			self.crossInfo.append(info/math.log(2)) # change of base 2 (bit count)
 		return self.crossInfo
 
 #def density(x, X):
