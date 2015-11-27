@@ -4,16 +4,18 @@
 mRMR: "Feature Selection Based on Mutual Information: Criteria of Max-Dependency, Max-Relevance, and Min-Redundancy" IEEE PAMI, 2005
 
 Current state:
-- (1) formulas of Max-Relevanve and Min-Redundancy.
+- (1) Formulas of Max-Relevanve and Min-Redundancy.
 - (1.0) Shannon entropy testing: I[X,Y] less/equal min(H[X], H[Y]) (unfinished).
 - (1.1) Symmetric testing: I[Xi, Xj] = I[Xj, Xi].
-- (2) stage1: incremental algorithm optimization (local optimal).
-- (3) stage2: wrapper (unfinished).
+- (1.2) Mutual information estimation of continuous data.
+- (2) Stage1: incremental algorithm optimization (local optimal).
+- (3) Stage2: wrapper (unfinished).
 
 Files:
-- [ ARR.py ] : arrhythmia dataset parser, generate arrhythmia.bin (I[Xi, Y], I[Xi, Xj]).
-- [ moduleinfo.py ] : mutual information calculation ].
-- [ mRMR v1.py ] : feature selection scheme.
+- [ ARR.py ] : Arrhythmia dataset parser, generate arrhythmia.bin (I[Xi, Y], I[Xi, Xj]).
+- [ moduleinfo.py ] : Mutual information calculation ].
+- [ mRMR v1.py ] : Feature selection scheme.
+- [ test condensity.py ] : Mutual information estimation of continuous data.
 
 Results:
 - [v1]: (http://felisj-blog.logdown.com/posts/318832-mrmr)
