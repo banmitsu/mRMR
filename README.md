@@ -11,9 +11,12 @@ Current state:
 - (3) stage2: wrapper (unfinished).
 
 Files:
-- [ ARR.py ] : arrhythmia dataset parser, generate arrhythmia.bin (I[Xi, Y], I[Xi, Xj])
-- [ moduleinfo.py ] : mutual information calculation ]
-- [ mRMR v1.py ] : feature selection scheme
+- [ ARR.py ] : arrhythmia dataset parser, generate arrhythmia.bin (I[Xi, Y], I[Xi, Xj]).
+- [ moduleinfo.py ] : mutual information calculation ].
+- [ mRMR v1.py ] : feature selection scheme.
+
+Results:
+- [v1]: (http://felisj-blog.logdown.com/posts/318832-mrmr)
 
 # Citation
 
